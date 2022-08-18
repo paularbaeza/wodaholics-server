@@ -1,0 +1,616 @@
+[
+    {
+      "wodType": "heroes",
+      "name": "JT",
+      "description": "21-15-9 reps of:",
+      "exercises": ["Handstand push-ups", "Ring dips", "Push-ups"],
+      "equipment": ["Rings"]
+    },
+    {
+        "wodType": "heroes",
+        "name": "Michael",
+        "description": "3 rounds for time of:",
+        "exercises": ["Run 800 m", "50 back extensions", "50 sit-ups"],
+        "equipment": ["AB mat"]
+    },
+    {
+        "wodType": "heroes",
+        "name": "Murph",
+        "description": "For time (weighted):",
+        "exercises": [
+        "1 mile run",
+        "100 pull-ups",
+        "200 push-ups",
+        "300 squats",
+        "1 mile run"
+      ],
+      "equipment": ["Weighted vest", "Pull-ups rack"]
+    },
+    {
+        "wodType": "heroes",
+        "name": "Daniel",
+        "description": "For time:",
+        "exercises": [
+        "50 pull-ups",
+        "400 meter run",
+        "21 thrusters (95/65 lb)",
+        "800 meter run",
+        "21 thrusters (95/65 lb)",
+        "400 meter run",
+        "50 pull-ups"
+      ],
+      "equipment": ["Barbell", "Plates", "Pull-ups rack"]
+    },
+    {
+        "wodType": "heroes",
+        "name": "Josh",
+        "description": "For time:",
+        "exercises": [
+        "21 OverHead squats (95/65 lb)",
+        "42 pull-ups",
+        "15 OverHead squats (95/65 lb)",
+        "30 pull-ups",
+        "9 OverHead squats (95/65 lb)",
+        "18 pull-ups"
+      ],
+      "equipment": ["Barbell", "Plates", "Pull-ups rack"]
+    },
+    {
+        "wodType": "heroes",
+        "name": "Jason",
+        "description": "For time:",
+        "exercises": [
+        "100 squats",
+        "5 muscle-ups",
+        "75 squats",
+        "10 muscle-ups",
+        "50 squats",
+        "15 muscle-ups",
+        "25 squats",
+        "20 muscle-ups"
+      ],
+      "equipment": ["Pull-ups rack"]
+    },
+    {
+        "wodType": "heroes",
+        "name": "Badger",
+        "description": "Complete 3 rounds for time:",
+        "exercises": [
+        "30 squat clean (95/65 lb)",
+        "30 pull-ups",
+        "Run 800 meters"
+      ],
+      "equipment": ["Barbell", "Plates", "Pull-ups rack"]
+    },
+    {
+        "wodType": "heroes",
+        "name": "Joshie",
+        "description": "Complete 3 rounds for time:",
+        "exercises": [
+        "21 dumbell snatch right arm (40 pounds)",
+        "21 L-pull-ups",
+        "21 dumbell snatch left arm (40 pounds)",
+        "21 L-pull-ups"
+      ],
+      "equipment": ["Dumbell", "Pull-ups rack"]
+    },
+    {
+        "wodType": "heroes",
+        "name": "Nate",
+        "description": "AMRAP 20 minutes:",
+        "exercises": [
+        "2 muscle-ups",
+        "4 handstan push-ups",
+        "8 kettlebell swings (2-pood)"
+      ],
+      "equipment": ["Kettlebell", "Pull-ups rack"]
+    },
+    {
+        "wodType": "heroes",
+        "name": "Randy",
+        "description": "For time:",
+        "exercises": [
+        "75 power snatchs (75 pounds)"
+      ],
+      "equipment": ["Barbell", "Plates"]
+    },
+    {
+        "wodType": "heroes",
+        "name": "Tommy V",
+        "description": "For time:",
+        "exercises": [
+        "21 thrusters (115 pounds)",
+        "12 rope climbs (15 ft)",
+        "15 thrusters (115 pounds)",
+        "9 rope climbs (15 ft)",
+        "9 thrusters (115 pounds)",
+        "6 rope climbs (15 ft)"
+      ],
+      "equipment": ["Barbell", "Plates", "Rope"]
+    },
+    {
+        "wodType": "heroes",
+        "name": "Griff",
+        "description": "For time:",
+        "exercises": [
+        "Run 800 meters",
+        "Run 400 meters backwards",
+        "Run 800 meters",
+        "Run 400 meters backwards"
+      ],
+      "equipment": ["None"]
+    },
+    {
+        "wodType": "heroes",
+        "name": "Ryan",
+        "description": "5 rounds for time:",
+        "exercises": [
+        "7 muscle-ups",
+        "21 burpees"
+      ],
+      "equipment": ["Pull-ups rack"]
+    },
+    {
+        "wodType": "heroes",
+        "name": "Erin",
+        "description": "5 rounds for time:",
+        "exercises": [
+        "15 dumbell split clean (40 pounds)",
+        "21 pull-ups"
+      ],
+      "equipment": ["Dumbell", "Pull-ups rack"]
+    },
+    {
+        "wodType": "heroes",
+        "name": "Mr.Joshua",
+        "description": "5 rounds for time:",
+        "exercises": [
+        "Run 400 meters",
+        "30 glute-ham sit-ups",
+        "15 deadlifts (250 pounds)"
+      ],
+      "equipment": ["Barbell", "Plates", "AB mat"]
+    },
+    {
+        "wodType": "heroes",
+        "name": "DT",
+        "description": "5 rounds for time:",
+        "exercises": [
+        "12 deadlifts (155 pounds)",
+        "9 hang power clens (155 pounds)",
+        "6 push jerk (155 pounds)"
+      ],
+      "equipment": ["Barbell", "Plates"]
+    },
+    {
+        "wodType": "heroes",
+        "name": "Danny",
+        "description": "AMRAP 20 minutes:",
+        "exercises": [
+        "30 box jump (24 inch)",
+        "20 push press (115 pounds)",
+        "30 pull-ups"
+      ],
+      "equipment": ["Barbell", "Plates", "Pull-ups rack", "Box"]
+    },
+    {
+        "wodType": "heroes",
+        "name": "Hansen",
+        "description": "5 rounds for time:",
+        "exercises": [
+        "30 kettlebell swings (55 lb)",
+        "30 burpees",
+        "30 glute-ham sit-ups"
+      ],
+      "equipment": ["Kettlebell"]
+    },
+    {
+        "wodType": "heroes",
+        "name": "Tyler",
+        "description": "5 rounds for time:",
+        "exercises": [
+        "7 muscle-ups",
+        "21 reps sumo deadlift high-pull (95/65 lb)"
+      ],
+      "equipment": ["Barbell", "Plates", "Pull-ups rack"]
+    },
+    {
+        "wodType": "heroes",
+        "name": "Lumberjack 20",
+        "description": "For time:",
+        "exercises": [
+        "20 deadlifts (275 lbs)",
+        "Run 400 meters",
+        "20 kettlebell swings (55 lbs)",
+        "Run 400 meters",
+        "20 overhead squats (115 lbs)",
+        "Run 400 meters",
+        "20 burpees",
+        "Run 400 meters",
+        "20 chest to bar",
+        "Run 400 meters",
+        "20 box jumps (24 inch)",
+        "Run 400 meters",
+        "20 dumbell squat cleans (45 lbs each)",
+        "Run 400 meters"
+      ],
+      "equipment": ["Barbell", "Plates", "Pull-ups rack", "Box", "Dumbell", "Kettlebell"]
+    },
+    {
+        "wodType": "heroes",
+        "name": "Stephen",
+        "description": "30-25-20-15-10-5 reps for time:",
+        "exercises": [
+        "GHD sit-ups",
+        "Back entension",
+        "Knees to elbow",
+        "Stiff legged deadlift (95/65 lb)"
+      ],
+      "equipment": ["GHD","Barbell", "Plates", "Pull-ups rack"]
+    },
+    {
+        "wodType": "girls",
+        "name": "Amanda",
+        "description": "9-7-5 reps for time:",
+        "exercises": [
+        "Muscle-ups",
+        "Snatches (135/95 lb)"
+      ],
+      "equipment": ["Barbell", "Plates", "Pull-ups rack"]
+    },
+    {
+        "wodType": "girls",
+        "name": "Angie",
+        "description": "For time:",
+        "exercises": [
+        "100 pull-ups",
+        "100 push-ups",
+        "100 sit-ups",
+        "100 squats"       
+      ],
+      "equipment": ["Pull-ups rack"]
+    },
+    {
+        "wodType": "girls",
+        "name": "Annie",
+        "description": "50, 40, 30, 20, 10 reps for time:",
+        "exercises": [
+        "Double-unders",
+        "Sit-ups"        
+      ],
+      "equipment": ["Jumping rope", "AB mat"]
+    },
+    {
+        "wodType": "girls",
+        "name": "Barbara",
+        "description": "5 rounds for time (3 minutes rest between rounds):",
+        "exercises": [
+        "20 pull-ups",
+        "30 push-ups",
+        "40 sit-ups",
+        "50 air squats"
+      ],
+      "equipment": ["AB mat", "Pull-ups rack"]
+    },
+    {
+        "wodType": "girls",
+        "name": "Chelsea",
+        "description": "EMOM 30 minutes",
+        "exercises": [
+        "5 pull-ups",
+        "10 push-ups",
+        "15 air squats"
+      ],
+      "equipment": ["Pull-ups rack"]
+    },
+    {
+        "wodType": "girls",
+        "name": "Cindy",
+        "description": "AMRAP 20 minutes:",
+        "exercises": [
+        "5 pull-ups",
+        "10 push-ups",
+        "15 air squats"
+      ],
+      "equipment": ["Pull-ups rack"]
+    },
+    {
+        "wodType": "girls",
+        "name": "Diane",
+        "description": "21-15-9 reps for time:",
+        "exercises": [
+        "Deadlifts (225/155 lb)",
+        "Handstand push-ups"
+        
+      ],
+      "equipment": ["Barbell", "Plates"]
+    },
+    {
+        "wodType": "girls",
+        "name": "Elizabeth",
+        "description": "21-15-9 reps for time:",
+        "exercises": [
+        "Squat cleans (135/95 lb)",
+        "Ring dips"       
+      ],
+      "equipment": ["Barbell", "Plates", "Rings"]
+    },
+    {
+        "wodType": "girls",
+        "name": "Eva",
+        "description": "5 rounds for time:",
+        "exercises": [
+        "Run 800 meters",
+        "30 kettlebell swings (2 pood)",
+        "30 pull-ups"     
+      ],
+      "equipment": ["Kettlebell", "Pull-ups rack"]
+    },
+    {
+        "wodType": "girls",
+        "name": "Fran",
+        "description": "21-15-9 reps for time:",
+        "exercises": [
+        "Thrusters (95/65 lb)",
+        "Pull-ups"
+        
+      ],
+      "equipment": ["Barbell", "Plates", "Pull-ups rack"]
+    },
+    {
+        "wodType": "girls",
+        "name": "Grace",
+        "description": "For time:",
+        "exercises": [
+        "30 clean-and-jerks (135/95 lb)"       
+      ],
+      "equipment": ["Barbell", "Plates"]
+    },
+    {
+        "wodType": "girls",
+        "name": "Helen",
+        "description": "3 rounds for time:",
+        "exercises": [
+        "Run 400 meters",
+        "21 kettlebell swings (50/35 lb)",
+        "12 pull-ups"
+        
+      ],
+      "equipment": ["Kettlebell", "Pull-ups rack"]
+    },
+    {
+        "wodType": "girls",
+        "name": "Isabel",
+        "description": "For time:",
+        "exercises": [
+        "30 snatches (135/95 lb)"
+      ],
+      "equipment": ["Barbell", "Plates"]
+    },
+    {
+        "wodType": "girls",
+        "name": "Jackie",
+        "description": "For time:",
+        "exercises": [
+        "1,000 meter row",
+        "50 thrusters (45/35 lb)",
+        "30 pull-ups"
+      ],
+      "equipment": ["Row", "Barbell", "Plates", "Pull-ups rack"]
+    },
+    {
+        "wodType": "girls",
+        "name": "Karen",
+        "description": "For time:",
+        "exercises": [
+        "150 wall ball shots (20/14 lb)"
+      ],
+      "equipment": ["Wall ball"]
+    },
+    {
+        "wodType": "girls",
+        "name": "Kelly",
+        "description": "5 rounds for time:",
+        "exercises": [
+        "Run 400 meters",
+        "30 box jumps (24/20 inch)",
+        "30 wall ball shots (20/14 lb)"
+        
+      ],
+      "equipment": ["Wall ball", "Box"]
+    },
+    {
+        "wodType": "girls",
+        "name": "Linda",
+        "description": "10-9-8-7-6-5-4-3-2-1 reps for time:",
+        "exercises": [
+        "Deadlifts (1.5 BW)",
+        "Bench press (BW)",
+        "Cleans (0.75 BW)"
+      ],
+      "equipment": ["Barbell", "Plates", "Bench"]
+    },
+    {
+        "wodType": "girls",
+        "name": "Lynne",
+        "description": "5 rounds for max reps:",
+        "exercises": [
+        "Bench press (BW)",
+        "Pull-ups"
+      ],
+      "equipment": ["Barbell", "Plates", "Bench", "Pull-ups rack"]
+    },{
+        "wodType": "girls",
+        "name": "Mary",
+        "description": "AMRAP 20 minutes:",
+        "exercises": [
+        "5 handstand push-ups",
+        "10 pistols (alternating)",
+        "15 pull-ups"
+      ],
+      "equipment": ["Pull-ups rack"]
+    },{
+        "wodType": "girls",
+        "name": "Nancy",
+        "description": "5 rounds for time:",
+        "exercises": [
+        "Run 400 meters",
+        "15 OverHead squats (95/65 lb)"
+      ],
+      "equipment": ["Barbell", "Plates"]
+    },
+    {
+        "wodType": "girls",
+        "name": "Nicole",
+        "description": "AMRAP 20 minutes:",
+        "exercises": [
+        "Run 400 meters",
+        "Max pull-ups"
+      ],
+      "equipment": ["Pull-ups rack"]
+    },
+    {
+        "wodType": "weights",
+        "name": "Back squat",
+        "description": "1RM",
+        "exercises": [
+        "Back squat"
+      ],
+      "equipment": ["Rack", "Barbell","Plates"]
+    },
+    {
+        "wodType": "weights",
+        "name": "Front squat",
+        "description": "1RM",
+        "exercises": [
+        "Front squat"
+      ],
+      "equipment": ["Rack", "Barbell","Plates"]
+    },
+    {
+        "wodType": "weights",
+        "name": "Bench press",
+        "description": "1RM",
+        "exercises": [
+        "Bench press"
+      ],
+      "equipment": ["Rack", "Barbell","Plates"]
+    },
+    {
+        "wodType": "weights",
+        "name": "Deadlift",
+        "description": "1RM",
+        "exercises": [
+        "Deadlift"
+      ],
+      "equipment": ["Barbell","Plates"]
+    },
+    {
+        "wodType": "weights",
+        "name": "Clean & jerk",
+        "description": "1RM",
+        "exercises": [
+        "Clean & jerk"
+      ],
+      "equipment": ["Barbell","Plates"]
+    },
+    {
+        "wodType": "weights",
+        "name": "Overhead squat",
+        "description": "1RM",
+        "exercises": [
+        "Overhead squat"
+      ],
+      "equipment": ["Barbell","Plates"]
+    },
+    {
+        "wodType": "weights",
+        "name": "Power clean",
+        "description": "1RM",
+        "exercises": [
+        "Power clean"
+      ],
+      "equipment": ["Barbell","Plates"]
+    },
+    {
+        "wodType": "weights",
+        "name": "Squat clean",
+        "description": "1RM",
+        "exercises": [
+        "Squat clean"
+      ],
+      "equipment": ["Barbell","Plates"]
+    },
+    {
+        "wodType": "weights",
+        "name": "Power snatch",
+        "description": "1RM",
+        "exercises": [
+        "Power snatch"
+      ],
+      "equipment": ["Barbell","Plates"]
+    },
+    {
+        "wodType": "weights",
+        "name": "Squat snatch",
+        "description": "1RM",
+        "exercises": [
+        "Squat snatch"
+      ],
+      "equipment": ["Barbell","Plates"]
+    },
+    {
+        "wodType": "weights",
+        "name": "Shoulder press",
+        "description": "1RM",
+        "exercises": [
+        "Shoulder press"
+      ],
+      "equipment": ["Barbell","Plates", "Rack"]
+    },
+    {
+        "wodType": "weights",
+        "name": "Push jerk",
+        "description": "1RM",
+        "exercises": [
+        "Push jerk"
+      ],
+      "equipment": ["Barbell","Plates"]
+    },
+    {
+        "wodType": "weights",
+        "name": "Split jerk",
+        "description": "1RM",
+        "exercises": [
+        "Split jerk"
+      ],
+      "equipment": ["Barbell","Plates"]
+    },
+    {
+        "wodType": "weights",
+        "name": "Thruster",
+        "description": "1RM",
+        "exercises": [
+        "Thruster"
+      ],
+      "equipment": ["Barbell","Plates"]
+    },
+    {
+        "wodType": "weights",
+        "name": "Push press",
+        "description": "1RM",
+        "exercises": [
+        "Push press"
+      ],
+      "equipment": ["Rack", "Barbell","Plates"]
+    },
+    {
+        "wodType": "weights",
+        "name": "Weighted pull-up",
+        "description": "1RM",
+        "exercises": [
+        "Weighted pull-up"
+      ],
+      "equipment": ["Barbell", "Plates", "Pull-ups rack", "Weighted vest" ]
+    }
+  ]
