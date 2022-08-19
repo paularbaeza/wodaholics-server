@@ -15,7 +15,7 @@ router.post("/signup", async (req, res, next) => {
       .status(400)
       .json({ errorMessage: "Please, you should fill all the fields"});
     return;
-  }
+  }else{
 
   const passwordRegex = /((?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[\W]).{8,64})/;
   if (passwordRegex.test(password) === false) {
@@ -57,6 +57,7 @@ router.post("/signup", async (req, res, next) => {
   } catch (error) {
     next(error);
   }
+}
 });
 
 

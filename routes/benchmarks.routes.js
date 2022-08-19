@@ -14,7 +14,7 @@ router.post("/:wodId", isAuthenticated, async (req, res, next) => {
     //console.log(req.payload)
     if (!score || !date) {
         res.status(400).json({errorMessage: "Please, fill all the fields"})
-    }
+    }else{
 
     try{
         const newBenchmark = await Benchmark.create ({
@@ -29,6 +29,7 @@ router.post("/:wodId", isAuthenticated, async (req, res, next) => {
     catch (error){
         next(error)
     }
+}
 })
 
 //GET "/api/benchmarks/:wodIid" => buscar todos los benchmarks de un wod concreto

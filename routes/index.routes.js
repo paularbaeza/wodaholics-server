@@ -19,4 +19,7 @@ router.use("/wods", wodsRoutes)
 const benchmarksRoutes = require("./benchmarks.routes")
 router.use("/benchmarks", benchmarksRoutes)
 
+const commentsRoutes = require("./comments.routes")
+router.use("/comment", commentsRoutes)
+
 module.exports = router;

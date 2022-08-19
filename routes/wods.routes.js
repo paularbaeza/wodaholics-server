@@ -79,7 +79,7 @@ router.post("/create", isAuthenticated, async (req, res, next) => {
     //console.log(req.payload)
     if (!wodType || !name || !description || !exercises || !equipment) {
         res.json({errorMessage: "Please, fill all the fields"})
-    }
+    }else{
 
     try{
         const newWod = await Wod.create ({
@@ -95,6 +95,7 @@ router.post("/create", isAuthenticated, async (req, res, next) => {
     }
     catch (error){
         next(error)
+    }
     }
 })
 
