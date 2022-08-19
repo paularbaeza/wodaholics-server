@@ -1,5 +1,4 @@
 const router = require("express").Router();
-const Wod = require("../models/Wod.model");
 const Comment = require("../models/Comment.model");
 
 const isAuthenticated = require("../middlewares/isAuthenticated");
