@@ -1,13 +1,18 @@
 const { Schema, model } = require("mongoose");
 
 const wodSchema = new Schema(
-  { creator:{
-    type:String,
-    default: "Crossfit DataBase"
-  },
+  {
+    creator: {
+      type: String,
+      default: "Crossfit DataBase",
+    },
     wodType: {
       type: String,
       enum: ["girls", "heroes", "weights"],
+    },
+    category: {
+      type: String,
+      required: true,
     },
     name: {
       type: String,

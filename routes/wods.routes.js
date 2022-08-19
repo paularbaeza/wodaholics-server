@@ -26,7 +26,7 @@ router.get("/:wodId/details", isAuthenticated, async (req,res,next) => {
     try{
         const wodDetails = await Wod.findById({_id:wodId})
         res.json(wodDetails)
-        console.log(wodDetails)
+        //console.log(wodDetails)
 
     }catch(error){
         next(error)

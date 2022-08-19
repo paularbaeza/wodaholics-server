@@ -13,7 +13,7 @@ router.post("/:wodId", isAuthenticated, async (req, res, next) => {
 
     //console.log(req.payload)
     if (!score || !date) {
-        res.json({errorMessage: "Please, fill all the fields"})
+        res.status(400).json({errorMessage: "Please, fill all the fields"})
     }
 
     try{
@@ -36,7 +36,7 @@ router.post("/:wodId", isAuthenticated, async (req, res, next) => {
 router.get("/:wodId", isAuthenticated, async (req, res, next) => {
     const {wodId} = req.params
     try{
-        const allBenchmarks = await Benchmark.find({wod:wodId})
+        const allBenchmarks = await Benchmark.find({wod:wodId}).populate("user")
         console.log(allBenchmarks)
         res.json(allBenchmarks)
 
@@ -45,6 +45,53 @@ router.get("/:wodId", isAuthenticated, async (req, res, next) => {
     }
 })
 
+
+//GET "/api/benchmarks/:wodId/higher" => buscar las mayores puntuaciones en un wod EMOM, AMRAP o max-kg
+
+router.get("/:wodId/higher", isAuthenticated, async (req, res, next) => {
+
+    const {wodId} = req.params
+    
+    try{
+        const higherBenchmarks = await Benchmark.find({$and: [{wod:wodId}, {category: {$in: ["AMRAP", "EMOM", "max-kg" ]}}]}).limit(5).sort({"score": -1}).collation({locale: "en_US", numericOrdering: true})
+        console.log(higherBenchmarks)
+        res.json(higherBenchmarks)
+
+    }catch (error){
+        next(error)
+    }
+})
+
+//GET "/api/benchmarks/:wodId/lower-time" => buscar las mayores puntuaciones en un wod For time
+
+router.get("/:wodId/lower-time", isAuthenticated, async (req, res, next) => {
+
+    const {wodId} = req.params
+    
+    try{
+        const lowerTime = await Benchmark.find({$and: [{wod:wodId}, {category:"for time"}]}).limit(5).sort({"score": 1}).collation({locale: "en_US", numericOrdering: true})
+        console.log(lowerTime)
+        res.json(lowerTime)
+
+    }catch (error){
+        next(error)
+    }
+})
+
+//GET "/api/benchmarks/:wodIid/benchmarks/all" => buscar todas mis puntuaciones de un wod
+
+router.get("/:wodId/benchmarks/all", isAuthenticated, async (req, res, next) => {
+    const {wodId} = req.params
+    const user= req.payload._id
+    try{
+        const allBenchmarks = await Benchmark.find({$and: [{wod:wodId}, {user:user}]}).sort({"date": -1})
+        console.log(allBenchmarks)
+        res.json(allBenchmarks)
+
+    }catch (error){
+        next(error)
+    }
+})
 
 //PATCH "/api/benchmarks/:benchmarkId" => actualizar un benchmark
 

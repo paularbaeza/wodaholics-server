@@ -16,7 +16,6 @@ router.use("/auth", authRoutes)
 const wodsRoutes = require("./wods.routes")
 router.use("/wods", wodsRoutes)
 
-
 const benchmarksRoutes = require("./benchmarks.routes")
 router.use("/benchmarks", benchmarksRoutes)
 

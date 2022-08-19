@@ -2,6 +2,7 @@
     {
       "wodType": "heroes",
       "name": "JT",
+      "category": "for time",
       "description": "21-15-9 reps of:",
       "exercises": ["Handstand push-ups", "Ring dips", "Push-ups"],
       "equipment": ["Rings"]
@@ -9,13 +10,15 @@
     {
         "wodType": "heroes",
         "name": "Michael",
+        "category": "for time",
         "description": "3 rounds for time of:",
         "exercises": ["Run 800 m", "50 back extensions", "50 sit-ups"],
         "equipment": ["AB mat"]
     },
     {
         "wodType": "heroes",
-        "name": "Murph",
+        "name": "Murph",        
+        "category": "for time",
         "description": "For time (weighted):",
         "exercises": [
         "1 mile run",
@@ -29,6 +32,7 @@
     {
         "wodType": "heroes",
         "name": "Daniel",
+        "category": "for time",
         "description": "For time:",
         "exercises": [
         "50 pull-ups",
@@ -44,6 +48,7 @@
     {
         "wodType": "heroes",
         "name": "Josh",
+        "category": "for time",
         "description": "For time:",
         "exercises": [
         "21 OverHead squats (95/65 lb)",
@@ -58,6 +63,7 @@
     {
         "wodType": "heroes",
         "name": "Jason",
+        "category": "for time",
         "description": "For time:",
         "exercises": [
         "100 squats",
@@ -74,6 +80,7 @@
     {
         "wodType": "heroes",
         "name": "Badger",
+        "category": "for time",
         "description": "Complete 3 rounds for time:",
         "exercises": [
         "30 squat clean (95/65 lb)",
@@ -85,6 +92,7 @@
     {
         "wodType": "heroes",
         "name": "Joshie",
+        "category": "for time",
         "description": "Complete 3 rounds for time:",
         "exercises": [
         "21 dumbell snatch right arm (40 pounds)",
@@ -97,6 +105,7 @@
     {
         "wodType": "heroes",
         "name": "Nate",
+        "category": "AMRAP",
         "description": "AMRAP 20 minutes:",
         "exercises": [
         "2 muscle-ups",
@@ -108,6 +117,7 @@
     {
         "wodType": "heroes",
         "name": "Randy",
+        "category": "for time",
         "description": "For time:",
         "exercises": [
         "75 power snatchs (75 pounds)"
@@ -117,6 +127,7 @@
     {
         "wodType": "heroes",
         "name": "Tommy V",
+        "category": "for time",
         "description": "For time:",
         "exercises": [
         "21 thrusters (115 pounds)",
@@ -131,6 +142,7 @@
     {
         "wodType": "heroes",
         "name": "Griff",
+        "category": "for time",
         "description": "For time:",
         "exercises": [
         "Run 800 meters",
@@ -142,7 +154,8 @@
     },
     {
         "wodType": "heroes",
-        "name": "Ryan",
+        "name": "Ryan",        
+        "category": "for time",
         "description": "5 rounds for time:",
         "exercises": [
         "7 muscle-ups",
@@ -153,6 +166,7 @@
     {
         "wodType": "heroes",
         "name": "Erin",
+        "category": "for time",
         "description": "5 rounds for time:",
         "exercises": [
         "15 dumbell split clean (40 pounds)",
@@ -162,7 +176,8 @@
     },
     {
         "wodType": "heroes",
-        "name": "Mr.Joshua",
+        "name": "Mr.Joshua",        
+        "category": "for time",
         "description": "5 rounds for time:",
         "exercises": [
         "Run 400 meters",
@@ -174,6 +189,7 @@
     {
         "wodType": "heroes",
         "name": "DT",
+        "category": "for time",
         "description": "5 rounds for time:",
         "exercises": [
         "12 deadlifts (155 pounds)",
@@ -185,6 +201,7 @@
     {
         "wodType": "heroes",
         "name": "Danny",
+        "category": "AMRAP",
         "description": "AMRAP 20 minutes:",
         "exercises": [
         "30 box jump (24 inch)",
@@ -196,6 +213,7 @@
     {
         "wodType": "heroes",
         "name": "Hansen",
+        "category": "for time",
         "description": "5 rounds for time:",
         "exercises": [
         "30 kettlebell swings (55 lb)",
@@ -207,6 +225,7 @@
     {
         "wodType": "heroes",
         "name": "Tyler",
+        "category": "for time",
         "description": "5 rounds for time:",
         "exercises": [
         "7 muscle-ups",
@@ -217,6 +236,7 @@
     {
         "wodType": "heroes",
         "name": "Lumberjack 20",
+        "category": "for time",
         "description": "For time:",
         "exercises": [
         "20 deadlifts (275 lbs)",
@@ -239,6 +259,7 @@
     {
         "wodType": "heroes",
         "name": "Stephen",
+        "category": "for time",
         "description": "30-25-20-15-10-5 reps for time:",
         "exercises": [
         "GHD sit-ups",
@@ -251,6 +272,7 @@
     {
         "wodType": "girls",
         "name": "Amanda",
+        "category": "for time",
         "description": "9-7-5 reps for time:",
         "exercises": [
         "Muscle-ups",
@@ -261,6 +283,7 @@
     {
         "wodType": "girls",
         "name": "Angie",
+        "category": "for time",
         "description": "For time:",
         "exercises": [
         "100 pull-ups",
@@ -273,6 +296,7 @@
     {
         "wodType": "girls",
         "name": "Annie",
+        "category": "for time",
         "description": "50, 40, 30, 20, 10 reps for time:",
         "exercises": [
         "Double-unders",
@@ -283,6 +307,7 @@
     {
         "wodType": "girls",
         "name": "Barbara",
+        "category": "for time",
         "description": "5 rounds for time (3 minutes rest between rounds):",
         "exercises": [
         "20 pull-ups",
@@ -295,6 +320,7 @@
     {
         "wodType": "girls",
         "name": "Chelsea",
+        "category": "EMOM",
         "description": "EMOM 30 minutes",
         "exercises": [
         "5 pull-ups",
@@ -306,6 +332,7 @@
     {
         "wodType": "girls",
         "name": "Cindy",
+        "category": "AMRAP",
         "description": "AMRAP 20 minutes:",
         "exercises": [
         "5 pull-ups",
@@ -317,6 +344,7 @@
     {
         "wodType": "girls",
         "name": "Diane",
+        "category": "for time",
         "description": "21-15-9 reps for time:",
         "exercises": [
         "Deadlifts (225/155 lb)",
@@ -328,6 +356,7 @@
     {
         "wodType": "girls",
         "name": "Elizabeth",
+        "category": "for time",
         "description": "21-15-9 reps for time:",
         "exercises": [
         "Squat cleans (135/95 lb)",
@@ -338,6 +367,7 @@
     {
         "wodType": "girls",
         "name": "Eva",
+        "category": "for time",
         "description": "5 rounds for time:",
         "exercises": [
         "Run 800 meters",
@@ -349,6 +379,7 @@
     {
         "wodType": "girls",
         "name": "Fran",
+        "category": "for time",
         "description": "21-15-9 reps for time:",
         "exercises": [
         "Thrusters (95/65 lb)",
@@ -360,6 +391,7 @@
     {
         "wodType": "girls",
         "name": "Grace",
+        "category": "for time",
         "description": "For time:",
         "exercises": [
         "30 clean-and-jerks (135/95 lb)"       
@@ -369,6 +401,7 @@
     {
         "wodType": "girls",
         "name": "Helen",
+        "category": "for time",
         "description": "3 rounds for time:",
         "exercises": [
         "Run 400 meters",
@@ -381,6 +414,7 @@
     {
         "wodType": "girls",
         "name": "Isabel",
+        "category": "for time",
         "description": "For time:",
         "exercises": [
         "30 snatches (135/95 lb)"
@@ -390,6 +424,7 @@
     {
         "wodType": "girls",
         "name": "Jackie",
+        "category": "for time",
         "description": "For time:",
         "exercises": [
         "1,000 meter row",
@@ -401,6 +436,7 @@
     {
         "wodType": "girls",
         "name": "Karen",
+        "category": "for time",
         "description": "For time:",
         "exercises": [
         "150 wall ball shots (20/14 lb)"
@@ -410,6 +446,7 @@
     {
         "wodType": "girls",
         "name": "Kelly",
+        "category": "for time",
         "description": "5 rounds for time:",
         "exercises": [
         "Run 400 meters",
@@ -422,6 +459,7 @@
     {
         "wodType": "girls",
         "name": "Linda",
+        "category": "for time",
         "description": "10-9-8-7-6-5-4-3-2-1 reps for time:",
         "exercises": [
         "Deadlifts (1.5 BW)",
@@ -433,6 +471,7 @@
     {
         "wodType": "girls",
         "name": "Lynne",
+        "category": "AMRAP",
         "description": "5 rounds for max reps:",
         "exercises": [
         "Bench press (BW)",
@@ -442,6 +481,7 @@
     },{
         "wodType": "girls",
         "name": "Mary",
+        "category": "AMRAP",
         "description": "AMRAP 20 minutes:",
         "exercises": [
         "5 handstand push-ups",
@@ -452,6 +492,7 @@
     },{
         "wodType": "girls",
         "name": "Nancy",
+        "category": "for time",
         "description": "5 rounds for time:",
         "exercises": [
         "Run 400 meters",
@@ -462,6 +503,7 @@
     {
         "wodType": "girls",
         "name": "Nicole",
+        "category": "AMRAP",
         "description": "AMRAP 20 minutes:",
         "exercises": [
         "Run 400 meters",
@@ -472,6 +514,7 @@
     {
         "wodType": "weights",
         "name": "Back squat",
+        "category": "max-kg",
         "description": "1RM",
         "exercises": [
         "Back squat"
@@ -481,6 +524,7 @@
     {
         "wodType": "weights",
         "name": "Front squat",
+        "category": "max-kg",
         "description": "1RM",
         "exercises": [
         "Front squat"
@@ -490,6 +534,7 @@
     {
         "wodType": "weights",
         "name": "Bench press",
+        "category": "max-kg",
         "description": "1RM",
         "exercises": [
         "Bench press"
@@ -499,6 +544,7 @@
     {
         "wodType": "weights",
         "name": "Deadlift",
+        "category": "max-kg",
         "description": "1RM",
         "exercises": [
         "Deadlift"
@@ -508,6 +554,7 @@
     {
         "wodType": "weights",
         "name": "Clean & jerk",
+        "category": "max-kg",
         "description": "1RM",
         "exercises": [
         "Clean & jerk"
@@ -517,6 +564,7 @@
     {
         "wodType": "weights",
         "name": "Overhead squat",
+        "category": "max-kg",
         "description": "1RM",
         "exercises": [
         "Overhead squat"
@@ -526,6 +574,7 @@
     {
         "wodType": "weights",
         "name": "Power clean",
+        "category": "max-kg",
         "description": "1RM",
         "exercises": [
         "Power clean"
@@ -535,6 +584,7 @@
     {
         "wodType": "weights",
         "name": "Squat clean",
+        "category": "max-kg",
         "description": "1RM",
         "exercises": [
         "Squat clean"
@@ -544,6 +594,7 @@
     {
         "wodType": "weights",
         "name": "Power snatch",
+        "category": "max-kg",
         "description": "1RM",
         "exercises": [
         "Power snatch"
@@ -553,6 +604,7 @@
     {
         "wodType": "weights",
         "name": "Squat snatch",
+        "category": "max-kg",
         "description": "1RM",
         "exercises": [
         "Squat snatch"
@@ -562,6 +614,7 @@
     {
         "wodType": "weights",
         "name": "Shoulder press",
+        "category": "max-kg",
         "description": "1RM",
         "exercises": [
         "Shoulder press"
@@ -571,6 +624,7 @@
     {
         "wodType": "weights",
         "name": "Push jerk",
+        "category": "max-kg",
         "description": "1RM",
         "exercises": [
         "Push jerk"
@@ -580,6 +634,7 @@
     {
         "wodType": "weights",
         "name": "Split jerk",
+        "category": "max-kg",
         "description": "1RM",
         "exercises": [
         "Split jerk"
@@ -589,6 +644,7 @@
     {
         "wodType": "weights",
         "name": "Thruster",
+        "category": "max-kg",
         "description": "1RM",
         "exercises": [
         "Thruster"
@@ -598,6 +654,7 @@
     {
         "wodType": "weights",
         "name": "Push press",
+        "category": "max-kg",
         "description": "1RM",
         "exercises": [
         "Push press"
@@ -607,6 +664,7 @@
     {
         "wodType": "weights",
         "name": "Weighted pull-up",
+        "category": "max-kg",
         "description": "1RM",
         "exercises": [
         "Weighted pull-up"
