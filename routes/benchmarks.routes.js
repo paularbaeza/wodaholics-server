@@ -12,7 +12,7 @@ router.post("/:wodId", isAuthenticated, async (req, res, next) => {
 
     //console.log(req.payload)
     if (!score || !date) {
-        res.status(400).json({errorMessage: "Please, fill all the fields"})
+        res.status(400).json({errorMessage: "Please, fill all the fields with valid data."})
     }else{
 
     try{
@@ -31,7 +31,7 @@ router.post("/:wodId", isAuthenticated, async (req, res, next) => {
 }
 })
 
-//GET "/api/benchmarks/:wodIid" => buscar todos los benchmarks de un wod concreto
+//GET "/api/benchmarks/:wodId" => buscar todos los benchmarks de un wod concreto
 
 router.get("/:wodId", isAuthenticated, async (req, res, next) => {
     const {wodId} = req.params
@@ -45,6 +45,21 @@ router.get("/:wodId", isAuthenticated, async (req, res, next) => {
     }
 })
 
+//!!!GET "/api/benchmarks/:userId" => buscar todos los benchmarks de un usuario
+
+router.get("/:userId", isAuthenticated, async (req, res, next) => {
+    const {userId} = req.params
+    try{
+        const allUserBenchmarks = await Benchmark.find({user:userId})
+        console.log(allUserBenchmarks)
+        res.json(allUserBenchmarks)
+
+    }catch (error){
+        next(error)
+    }
+})
+
+
 
 //GET "/api/benchmarks/:wodId/higher" => buscar las mayores puntuaciones en un wod EMOM, AMRAP o max-kg
 
@@ -53,7 +68,7 @@ router.get("/:wodId/higher", isAuthenticated, async (req, res, next) => {
     const {wodId} = req.params
     
     try{
-        const higherBenchmarks = await Benchmark.find({$and: [{wod:wodId}, {category: {$in: ["AMRAP", "EMOM", "max-kg" ]}}]}).limit(5).sort({"score": -1}).collation({locale: "en_US", numericOrdering: true})
+        const higherBenchmarks = await Benchmark.find({$and: [{wod:wodId}, {category: {$in: ["AMRAP", "EMOM", "max-kg" ]}}]}).limit(3).sort({"score": -1}).collation({locale: "en_US", numericOrdering: true})
         console.log(higherBenchmarks)
         res.json(higherBenchmarks)
 
@@ -69,7 +84,7 @@ router.get("/:wodId/lower-time", isAuthenticated, async (req, res, next) => {
     const {wodId} = req.params
     
     try{
-        const lowerTime = await Benchmark.find({$and: [{wod:wodId}, {category:"for time"}]}).limit(5).sort({"score": 1}).collation({locale: "en_US", numericOrdering: true})
+        const lowerTime = await Benchmark.find({$and: [{wod:wodId}, {category:"for time"}]}).limit(3).sort({"score": 1}).collation({locale: "en_US", numericOrdering: true})
         console.log(lowerTime)
         res.json(lowerTime)
 

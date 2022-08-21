@@ -13,7 +13,9 @@ const benchmarkSchema = new Schema(
         ref: "Wod",
       }],
     score: String,
-    date: Date
+    date: {
+      type:String,
+    }
   },
   {
     timestamps: true,

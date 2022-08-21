@@ -1,6 +1,7 @@
 const router = require("express").Router();
 const Wod = require("../models/Wod.model")
 const Benchmark = require("../models/Benchmark.model")
+const User = require("../models/User.model")
 
 const isAuthenticated = require("../middlewares/isAuthenticated")
 
@@ -97,6 +98,39 @@ router.post("/create", isAuthenticated, async (req, res, next) => {
         next(error)
     }
     }
+
 })
+
+//POST "/api/wods/:wodId/add-fav" => añadir un wod a favorito
+
+router.post("/:wodId/add-fav", isAuthenticated, async (req, res, next) => {
+    const {wodId} = req.params
+  
+      try {
+          const wodToAdd = await Wod.findById(wodId).select("_id");
+          console.log(wodToAdd)
+            await User.findByIdAndUpdate({_id: req.payload._id}, {$addToSet: {favWods: wodToAdd}})
+          res.json("wod added to favorite list")
+      } catch (error) {
+        next(error);
+      }
+  });
+
+
+  //POST "/api/wods/:wodId/delete-fav" => eliminar un wod de favoritos
+
+router.post("/:wodId/delete-fav", isAuthenticated, async (req, res, next) => {
+    const {wodId} = req.params
+  
+      try {
+          const wodToDelete = await Wod.findById(wodId).select("_id");
+            await User.findByIdAndUpdate({_id: req.payload._id}, {$pull: {favWods: wodToDelete._id}})
+          res.json("wod deleted from your favorite list")
+      } catch (error) {
+        next(error);
+      }
+  });
+
+
 
 module.exports = router;

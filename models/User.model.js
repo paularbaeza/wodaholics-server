@@ -16,13 +16,17 @@ const userSchema = new Schema(
       type:String,
       default: "/images/defaultuser.jpg"
     },
-    isAdmin:{
-      type:Boolean,
-      default:false
+    role:{
+      type:String,
+      default: "user"
     },
     friends: [{
       type: Schema.Types.ObjectId,
       ref: "User",
+    }],
+    favWods: [{
+      type: Schema.Types.ObjectId,
+      ref: "Wod",
     }]
   },
   {
