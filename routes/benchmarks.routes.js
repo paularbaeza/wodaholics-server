@@ -72,7 +72,7 @@ router.get("/:wodId/highscores", isAuthenticated, async (req, res, next) => {
     try{
         const allWodsBenchmarks = await Benchmark.find({wod:wodId}).populate("wod")
         const lowerTime = await Benchmark.find({$and: [{wod:wodId}, {category:"for time"}]}).limit(3).sort({"score": 1}).collation({locale: "en_US", numericOrdering: true}).populate("user")
-        const higherBenchmark= await Benchmark.find({$and: [{wod:wodId}, {category: {$in: ["AMRAP", "EMOM", "max-kg" ]}}]}).limit(3).sort({"score": -1}).collation({locale: "en_US", numericOrdering: true})    
+        const higherBenchmark= await Benchmark.find({$and: [{wod:wodId}, {category: {$in: ["AMRAP", "EMOM", "max-kg" ]}}]}).limit(3).sort({"score": -1}).collation({locale: "en_US", numericOrdering: true}).populate("user")   
         console.log(allWodsBenchmarks)
         allWodsBenchmarks.map((eachBenchmark)=> {
             if (eachBenchmark.wod[0].category=== "for time"){        
@@ -97,7 +97,7 @@ router.get("/:wodId/all", isAuthenticated, async (req, res, next) => {
     const {wodId} = req.params
     const user= req.payload._id
     try{
-        const allBenchmarks = await Benchmark.find({$and: [{wod:wodId}, {user:user}]}).sort({"date": -1})
+        const allBenchmarks = await Benchmark.find({$and: [{wod:wodId}, {user:user}]}).sort({"date": 1})
         console.log(allBenchmarks)
         res.json(allBenchmarks)
 
