@@ -47,13 +47,13 @@ router.get("/:wodId", isAuthenticated, async (req, res, next) => {
 
 
 
-//!!!GET "/api/benchmarks/:userId" => buscar todos los benchmarks de un usuario
+//GET "/api/benchmarks/:userId" => buscar todos los benchmarks de un usuario
 
-router.get("/:userId", isAuthenticated, async (req, res, next) => {
+router.get("/all/:userId", isAuthenticated, async (req, res, next) => {
     const {userId} = req.params
     try{
-        const allUserBenchmarks = await Benchmark.find({user:userId})
-        console.log(allUserBenchmarks)
+        const allUserBenchmarks = await Benchmark.find({user:userId}).populate("user").populate("wod")
+        //console.log(allUserBenchmarks)
         res.json(allUserBenchmarks)
 
     }catch (error){
