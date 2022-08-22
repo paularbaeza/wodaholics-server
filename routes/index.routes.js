@@ -25,4 +25,7 @@ router.use("/comment", commentsRoutes)
 const profileRoutes = require("./profile.routes")
 router.use("/profile", profileRoutes)
 
+const uploadRoutes = require("./upload.routes")
+router.use("/upload", uploadRoutes)
+
 module.exports = router;

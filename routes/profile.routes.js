@@ -1,5 +1,6 @@
 const router = require("express").Router();
 const User = require("../models/User.model");
+const Benchmark = require("../models/Benchmark.model")
 
 const isAuthenticated = require("../middlewares/isAuthenticated");
 
@@ -117,3 +118,31 @@ router.get("/fav-wods", isAuthenticated, async (req, res, next) => {
   }
 });
 module.exports = router;
+
+//GET "/api/profile/mybenchmarks" => buscar todos los benchmarks del usuario conectado
+
+router.get("/mybenchmarks", isAuthenticated, async (req, res, next) => {
+  const user = req.payload._id
+  console.log(user)
+  try{
+      const allMyBenchmarks = await Benchmark.find({user: user}).populate("wod")
+      res.json(allMyBenchmarks)
+  }catch (error){
+      next(error)
+  }
+})
+
+
+//GET "/api/profile/search-users" => buscar usuarios en la app
+
+router.get("/search-users", isAuthenticated, async (req, res, next) => {
+    try {
+      const users = await User.find()
+  
+      res.json(users);
+    } catch (error) {
+      next(error);
+    }
+  });
+  module.exports = router;
+  

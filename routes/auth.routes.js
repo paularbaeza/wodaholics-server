@@ -93,7 +93,7 @@ router.post("/login", async (req, res, next) => {
         email: foundUser.email,
         username:foundUser.username,
         role: foundUser.role,
-        img:foundUser.img
+        img: foundUser.img
       } 
   
       const authToken = jwt.sign(
