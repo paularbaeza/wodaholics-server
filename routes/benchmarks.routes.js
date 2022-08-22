@@ -63,37 +63,33 @@ router.get("/:userId", isAuthenticated, async (req, res, next) => {
 
 
 
-//GET "/api/benchmarks/:wodId/higher" => buscar las mayores puntuaciones en un wod EMOM, AMRAP o max-kg
+//GET "/api/benchmarks/:wodId/highscores" => buscar las mayores puntuaciones de cualquier wod
 
-router.get("/:wodId/higher", isAuthenticated, async (req, res, next) => {
-
-    const {wodId} = req.params
-    
-    try{
-        const higherBenchmarks = await Benchmark.find({$and: [{wod:wodId}, {category: {$in: ["AMRAP", "EMOM", "max-kg" ]}}]}).limit(3).sort({"score": -1}).collation({locale: "en_US", numericOrdering: true})
-        console.log(higherBenchmarks)
-        res.json(higherBenchmarks)
-
-    }catch (error){
-        next(error)
-    }
-})
-
-//GET "/api/benchmarks/:wodId/lower-time" => buscar las mayores puntuaciones en un wod For time
-
-router.get("/:wodId/lower-time", isAuthenticated, async (req, res, next) => {
+router.get("/:wodId/highscores", isAuthenticated, async (req, res, next) => {
 
     const {wodId} = req.params
     
     try{
+        const allWodsBenchmarks = await Benchmark.find({wod:wodId}).populate("wod")
         const lowerTime = await Benchmark.find({$and: [{wod:wodId}, {category:"for time"}]}).limit(3).sort({"score": 1}).collation({locale: "en_US", numericOrdering: true}).populate("user")
-        console.log(lowerTime)
-        res.json(lowerTime)
+        const higherBenchmark= await Benchmark.find({$and: [{wod:wodId}, {category: {$in: ["AMRAP", "EMOM", "max-kg" ]}}]}).limit(3).sort({"score": -1}).collation({locale: "en_US", numericOrdering: true})    
+        console.log(allWodsBenchmarks)
+        allWodsBenchmarks.map((eachBenchmark)=> {
+            if (eachBenchmark.wod[0].category=== "for time"){        
+                res.json(lowerTime)
+            }
+            
+            if (eachBenchmark.wod[0].category=== "AMRAP" || eachBenchmark.wod[0].category=== "EMOM" ||eachBenchmark.wod[0].category=== "max-kg" ){
+                res.json(higherBenchmark)
+            }
+        })
+
 
     }catch (error){
         next(error)
     }
 })
+
 
 //GET "/api/benchmarks/:wodIid//all" => buscar todas mis puntuaciones de un wod
 
