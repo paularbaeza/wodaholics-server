@@ -21,7 +21,7 @@ router.post("/:wodId", isAuthenticated, async (req, res, next) => {
             wod: wodId,
             score: score,
             date: date
-        }).populate("wod")
+        })
 
         res.json(newBenchmark)
     }
@@ -112,17 +112,15 @@ router.get("/:wodId/all", isAuthenticated, async (req, res, next) => {
 router.patch ("/:benchmarkId", isAuthenticated, async (req,res,next) => {
     const {benchmarkId} = req.params
     const {score, date} = req. body
-    const user= req.payload._id
 
 
     try{
-        await Benchmark.findByIdAndUpdate({_id:benchmarkId,
-            _id: user,
+        await Benchmark.findByIdAndUpdate(benchmarkId, {
             score: score,
             date: date
         })
 
-        res.json("benchmark actualizado")
+        res.json("benchmark updated")
 
     }catch (error){
         next(error)
