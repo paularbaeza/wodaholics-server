@@ -79,6 +79,23 @@ router.get("/friends", isAuthenticated, async (req, res, next) => {
   }
 });
 
+
+//GET "api/profile/friendsIds" => buscar todos los Ids amigos del usuario conectado
+
+router.get("/friendsIds", isAuthenticated, async (req, res, next) => {
+  try {
+    const loggedUser = await User.findById({ _id: req.payload._id })
+
+    const loggedUserFriends = loggedUser.friends;
+    //console.log(loggedUserFriends)
+
+    res.json(loggedUserFriends);
+  } catch (error) {
+    next(error);
+  }
+});
+
+
 //POST "api/profile/:userId/delete-friend" => eliminar un amigo
 
 router.post(
@@ -144,5 +161,20 @@ router.get("/search-users", isAuthenticated, async (req, res, next) => {
       next(error);
     }
   });
+
+//GET "/api/profile/:userId/info" => buscar info de usuarios
+
+router.get("/:userId/info", isAuthenticated, async (req, res, next) => {
+  const{userId} = req.params
+
+  try {
+    const user = await User.findById(userId)
+
+    res.json(user);
+  } catch (error) {
+    next(error);
+  }
+});
+
   module.exports = router;
   

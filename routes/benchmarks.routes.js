@@ -96,7 +96,7 @@ router.get("/:wodId/fortime/highscore", isAuthenticated, async (req,res,next)=> 
     const user= req.payload._id
 
     try{
-        const lowerTime = await Benchmark.find({$and: [{wod:wodId}, {user: user}, {category:"for time"}]}).limit(1).sort({"score": 1}).collation({locale: "en_US", numericOrdering: true}).populate("user")
+        const lowerTime = await Benchmark.find({$and: [{wod:wodId}, {user: user}, {category:"for time"}]}).limit(1).sort({"score": 1}).collation({locale: "en_US", numericOrdering: true})
 
         console.log(lowerTime)
         res.json(lowerTime)
@@ -163,7 +163,7 @@ router.delete("/:benchmarkId", isAuthenticated, async (req, res, next) => {
 router.get("/:userId/highscores", isAuthenticated, async (req, res, next) => {
     const {userId} = req.params
     try{
-        const allBenchmarks = await Benchmark.find({$and: [{wod:wodId}, {user:user}]}).sort({"date": 1})
+        const allBenchmarks = await Benchmark.find({user:userId}).sort({"date": 1})
         console.log(allBenchmarks)
         res.json(allBenchmarks)
 
