@@ -90,6 +90,22 @@ router.get("/:wodId/highscores", isAuthenticated, async (req, res, next) => {
     }
 })
 
+//TODO GET "/api/benchmarks/:wodId/fortime/highscore" => Buscar la mayor puntuacion del usuario conectado de un wod For Time (no tiene gráfica)
+router.get("/:wodId/fortime/highscore", isAuthenticated, async (req,res,next)=> {
+    const {wodId} = req.params
+    const user= req.payload._id
+
+    try{
+        const lowerTime = await Benchmark.find({$and: [{wod:wodId}, {user: user}, {category:"for time"}]}).limit(1).sort({"score": 1}).collation({locale: "en_US", numericOrdering: true}).populate("user")
+
+        console.log(lowerTime)
+        res.json(lowerTime)
+
+    }catch (error){
+        next(error)
+    }
+})
+
 
 //GET "/api/benchmarks/:wodIid//all" => buscar todas mis puntuaciones de un wod
 
@@ -142,7 +158,19 @@ router.delete("/:benchmarkId", isAuthenticated, async (req, res, next) => {
     }
 })
 
+//TODO GET "/api/benchmarks/:userId/highscores" => traer todos los highscores de un usuario
 
+router.get("/:userId/highscores", isAuthenticated, async (req, res, next) => {
+    const {userId} = req.params
+    try{
+        const allBenchmarks = await Benchmark.find({$and: [{wod:wodId}, {user:user}]}).sort({"date": 1})
+        console.log(allBenchmarks)
+        res.json(allBenchmarks)
+
+    }catch (error){
+        next(error)
+    }
+})
 
 
 module.exports = router;
