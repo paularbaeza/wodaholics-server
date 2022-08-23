@@ -158,24 +158,24 @@ router.delete("/:benchmarkId", isAuthenticated, async (req, res, next) => {
     }
 })
 
-//TODO GET "/api/benchmarks/:userId/highscores" => traer todos los highscores de un usuario
+// //TODO GET "/api/benchmarks/:userId/highscores" => traer todos los highscores de un usuario
 
-router.get("/:userId/:wodId/highscores", isAuthenticated, async (req, res, next) => {
-    const {userId, wodId} = req.params
-    try{
-        const allBenchmarks = await Benchmark.find({user:userId}).sort({"date": 1})
-        //console.log(allBenchmarks)
+// router.get("/:userId/:wodId/highscores", isAuthenticated, async (req, res, next) => {
+//     const {userId, wodId} = req.params
+//     try{
+//         const allBenchmarks = await Benchmark.find({user:userId}).sort({"date": 1})
+//         //console.log(allBenchmarks)
 
-        const lowerTime = await Benchmark.find({$and: [{wod:wodId}, {user:userId}, {category:"for time"}]}).limit(1).sort({"score": -1}).collation({locale: "en_US", numericOrdering: true})
-        const higherBenchmark= await Benchmark.find({$and: [{wod:wodId}, {user:userId}, {category: {$in: ["AMRAP", "EMOM", "max-kg" ]}}]}).limit(1).sort({"score": -1}).collation({locale: "en_US", numericOrdering: true}) 
-        //console.log(lowerTime)
-        console.log(higherBenchmark)
-        res.json(allBenchmarks)
+//         const lowerTime = await Benchmark.find({$and: [{wod:wodId}, {user:userId}, {category:"for time"}]}).limit(1).sort({"score": -1}).collation({locale: "en_US", numericOrdering: true})
+//         const higherBenchmark= await Benchmark.find({$and: [{wod:wodId}, {user:userId}, {category: {$in: ["AMRAP", "EMOM", "max-kg" ]}}]}).limit(1).sort({"score": 1}).collation({locale: "en_US", numericOrdering: true}) 
+//         //console.log(lowerTime)
+//         console.log(higherBenchmark)
+//         res.json(allBenchmarks)
 
-    }catch (error){
-        next(error)
-    }
-})
+//     }catch (error){
+//         next(error)
+//     }
+// })
 
 
 module.exports = router;
