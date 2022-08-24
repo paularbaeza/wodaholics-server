@@ -108,7 +108,7 @@ router.post("/:wodId/add-fav", isAuthenticated, async (req, res, next) => {
   
       try {
           const wodToAdd = await Wod.findById(wodId).select("_id");
-          console.log(wodToAdd)
+          
             await User.findByIdAndUpdate({_id: req.payload._id}, {$addToSet: {favWods: wodToAdd}})
           res.json("wod added to favorite list")
       } catch (error) {

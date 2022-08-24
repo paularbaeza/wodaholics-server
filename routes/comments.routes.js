@@ -32,7 +32,7 @@ router.post("/:wodId", isAuthenticated, async (req, res, next) => {
 router.get("/:wodId", isAuthenticated, async (req, res, next) => {
   const { wodId } = req.params;
   try {
-    const allComments = await Comment.find({ wod: wodId });
+    const allComments = await Comment.find({ wod: wodId }).populate("user");
     res.json(allComments);
     //console.log(allComments)
   } catch (error) {
@@ -64,7 +64,7 @@ router.patch("/:commentId", isAuthenticated, async (req, res, next) => {
 
 //DELETE "/api/comment/:commentId" => eliminar un comentario
 
-router.delete("/:commentId", isAuthenticated, async (req, res, next) => {
+router.delete("/:commentId/user-delete", isAuthenticated, async (req, res, next) => {
   const { commentId } = req.params;
   try {
     await Comment.findByIdAndDelete({ _id: commentId });
@@ -73,5 +73,19 @@ router.delete("/:commentId", isAuthenticated, async (req, res, next) => {
     next(error);
   }
 });
+
+// //DELETE "/api/comment/:commentId/user-delete" => eliminar un comentario si lo has hecho tú
+
+// router.delete("/:commentId/user-delete", isAuthenticated, async (req, res, next) => {
+//   const { commentId } = req.params;
+//   const user= req.payload._id
+
+//   try {
+//     await Comment.find({$and: [{_id:commentId}, {user: user}]});
+//     res.json("Comentario borrado");
+//   } catch (error) {
+//     next(error);
+//   }
+// });
 
 module.exports = router;
