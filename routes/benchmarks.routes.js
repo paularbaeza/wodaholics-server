@@ -157,41 +157,6 @@ router.delete("/:benchmarkId", isAuthenticated, async (req, res, next) => {
     }
 })
 
-// //TODO GET "/api/benchmarks/:userId/highscores" => traer todos los highscores de un usuario
-
- router.get("/:userId/:wodId/best", isAuthenticated, async (req, res, next) => {
-     const {userId, wodId} = req.params
-
-     try{
-         const allBenchmarks = await Benchmark.find({user:userId})
-         //console.log(allBenchmarks)
-         const lowerTime = await Benchmark.find({$and: [{wod:wodId}, {user:userId}, {category:"for time"}]}).limit(1).sort({"score": -1}).collation({locale: "en_US", numericOrdering: true})
-         const higherBenchmark= await Benchmark.find({$and: [{wod:wodId}, {user:userId}, {category: {$in: ["AMRAP", "EMOM", "max-kg" ]}}]}).limit(1).sort({"score": 1}).collation({locale: "en_US", numericOrdering: true}) 
-        //console.log(lowerTime)
-        console.log(higherBenchmark)
-        console.log(allBenchmarks)
-
-
-         await allBenchmarks.map((eachBenchmark)=> {
-            if (eachBenchmark.wod[0].category=== "for time"){        
-                res.json(lowerTime)
-                console.log(lowerTime)
-                return;
-            }
-            else if (eachBenchmark.wod[0].category=== "AMRAP" || eachBenchmark.wod[0].category=== "EMOM" ||eachBenchmark.wod[0].category=== "max-kg" ){
-                res.json(higherBenchmark)
-                console.log(higherBenchmark)
-
-                return;
-            }
-
-            res.status(400).json("verificar qué ocurre")
-        })
-
-     }catch (error){
-         next(error)
-     }
- })
 
 
 module.exports = router;
