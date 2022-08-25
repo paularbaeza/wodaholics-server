@@ -64,7 +64,6 @@ router.post("/signup", async (req, res, next) => {
 // POST "/api/auth/login" => comprobar las credenciales del usuario
 router.post("/login", async (req, res, next) => {
 
-    console.log(req.body)
     const { access, password } = req.body
   
     //validaciones
@@ -93,7 +92,7 @@ router.post("/login", async (req, res, next) => {
         email: foundUser.email,
         username:foundUser.username,
         role: foundUser.role,
-        img: foundUser.img
+        img: foundUser.img,
       } 
   
       const authToken = jwt.sign(
@@ -111,7 +110,6 @@ router.post("/login", async (req, res, next) => {
   // GET "/api/auth/verify" => verificar si el usuario está dentro de su cuenta
   router.get("/verify", isAuthenticated, (req, res, next) => {
   
-    console.log(req.payload)
     res.json(req.payload)
   
   })

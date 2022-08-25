@@ -94,7 +94,6 @@ router.get("/:wodId/details", isAuthenticated, async (req,res,next) => {
 router.post("/create", isAuthenticated, async (req, res, next) => {
     const {wodType, name, description, exercises, equipment} = req. body
 
-    //console.log(req.payload)
     if (!wodType || !name || !description || !exercises || !equipment) {
         res.json({errorMessage: "Please, fill all the fields"})
     }else{

@@ -34,7 +34,6 @@ router.get("/:wodId", isAuthenticated, async (req, res, next) => {
   try {
     const allComments = await Comment.find({ wod: wodId }).populate("user");
     res.json(allComments);
-    //console.log(allComments)
   } catch (error) {
     next(error);
   }

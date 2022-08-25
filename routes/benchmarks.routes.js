@@ -10,7 +10,6 @@ router.post("/:wodId", isAuthenticated, async (req, res, next) => {
     const {score, date} = req.body
     const {wodId} = req.params
 
-    //console.log(req.payload)
     if (!score || !date) {
         res.status(400).json({errorMessage: "Please, fill all the fields with valid data."})
     }else{
@@ -37,7 +36,6 @@ router.get("/:wodId", isAuthenticated, async (req, res, next) => {
     const {wodId} = req.params
     try{
         const allBenchmarks = await Benchmark.find({wod:wodId}).populate("user")
-        console.log(allBenchmarks)
         res.json(allBenchmarks)
 
     }catch (error){
@@ -53,7 +51,6 @@ router.get("/all/:userId", isAuthenticated, async (req, res, next) => {
     const {userId} = req.params
     try{
         const allUserBenchmarks = await Benchmark.find({user:userId}).populate("user").populate("wod")
-        //console.log(allUserBenchmarks)
         res.json(allUserBenchmarks)
 
     }catch (error){
@@ -99,7 +96,6 @@ router.get("/:wodId/fortime/highscore", isAuthenticated, async (req,res,next)=> 
     try{
         const lowerTime = await Benchmark.find({$and: [{wod:wodId}, {user: user}, {category:"for time"}]}).limit(1).sort({"score": 1}).collation({locale: "en_US", numericOrdering: true})
 
-        console.log(lowerTime)
         res.json(lowerTime)
 
     }catch (error){
@@ -115,7 +111,6 @@ router.get("/:wodId/all", isAuthenticated, async (req, res, next) => {
     const user= req.payload._id
     try{
         const allBenchmarks = await Benchmark.find({$and: [{wod:wodId}, {user:user}]}).sort({"date": 1})
-        console.log(allBenchmarks)
         res.json(allBenchmarks)
 
     }catch (error){

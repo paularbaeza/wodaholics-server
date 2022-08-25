@@ -71,7 +71,6 @@ router.get("/friends", isAuthenticated, async (req, res, next) => {
     );
 
     const loggedUserFriends = loggedUser.friends;
-    //console.log(loggedUserFriends)
 
     res.json(loggedUserFriends);
   } catch (error) {
@@ -87,7 +86,6 @@ router.get("/friendsIds", isAuthenticated, async (req, res, next) => {
     const loggedUser = await User.findById({ _id: req.payload._id })
 
     const loggedUserFriends = loggedUser.friends;
-    //console.log(loggedUserFriends)
 
     res.json(loggedUserFriends);
   } catch (error) {
@@ -140,7 +138,6 @@ module.exports = router;
 
 router.get("/mybenchmarks", isAuthenticated, async (req, res, next) => {
   const user = req.payload._id
-  console.log(user)
   try{
       const allMyBenchmarks = await Benchmark.find({user: user}).populate("wod")
       res.json(allMyBenchmarks)
