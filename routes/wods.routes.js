@@ -13,7 +13,25 @@ router.get("/:type", isAuthenticated, async(req,res,next) => {
     try{
         const allWodsByType = await Wod.find({wodType:type})
         res.json(allWodsByType)
-        //console.log(allWodsByType)
+    }catch(error){
+        next(error)
+    }
+})
+
+
+//GET "/api/wods/random" => get a randomWod
+
+router.get("/random/get", isAuthenticated, async(req,res,next) => {
+
+    try{
+       
+        const allWods = await Wod.find()
+        if(allWods){
+
+        const randomWodIndex= allWods[Math.floor(Math.random()*allWods.length)]
+        res.json(randomWodIndex)
+    }
+
     }catch(error){
         next(error)
     }
@@ -27,7 +45,6 @@ router.get("/:wodId/details", isAuthenticated, async (req,res,next) => {
     try{
         const wodDetails = await Wod.findById({_id:wodId})
         res.json(wodDetails)
-        //console.log(wodDetails)
 
     }catch(error){
         next(error)
