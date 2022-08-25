@@ -28,8 +28,8 @@ router.get("/random/get", isAuthenticated, async(req,res,next) => {
         const allWods = await Wod.find()
         if(allWods){
 
-        const randomWodIndex= allWods[Math.floor(Math.random()*allWods.length)]
-        res.json(randomWodIndex)
+        const randomWod= allWods[Math.floor(Math.random()*allWods.length)]
+        res.json(randomWod)
     }
 
     }catch(error){

@@ -177,6 +177,23 @@ router.get("/:userId/info", isAuthenticated, async (req, res, next) => {
 });
 
 
+//GET "/api/profile/random-users" => traer usuarios random
+
+router.get("/random-users", isAuthenticated, async (req, res, next) => {
+  
+
+  try {
+    const allUsers = await User.find()
+    const shuffledUsers =[...allUsers].sort(()=>0.5 - Math.random())
+    const fiveRandomUsers = shuffledUsers.slice(0,5)
+    res.json(fiveRandomUsers)
+
+  } catch (error) {
+    next(error);
+  }
+});
+
+
 
 
 
