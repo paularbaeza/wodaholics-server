@@ -9,7 +9,7 @@ router.post("/:wodId", isAuthenticated, async (req, res, next) => {
   const { title, comment } = req.body;
   const {wodId} = req.params
 
-  if (!title || !comment) {
+  if (!title) {
     res.json({ errorMessage: "Please, fill all the fields" });
   } else {
     try {
