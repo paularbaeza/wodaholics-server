@@ -73,18 +73,5 @@ router.delete("/:commentId/user-delete", isAuthenticated, async (req, res, next)
   }
 });
 
-// //DELETE "/api/comment/:commentId/user-delete" => eliminar un comentario si lo has hecho tú
-
-// router.delete("/:commentId/user-delete", isAuthenticated, async (req, res, next) => {
-//   const { commentId } = req.params;
-//   const user= req.payload._id
-
-//   try {
-//     await Comment.find({$and: [{_id:commentId}, {user: user}]});
-//     res.json("Comentario borrado");
-//   } catch (error) {
-//     next(error);
-//   }
-// });
 
 module.exports = router;
